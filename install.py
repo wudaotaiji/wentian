@@ -137,4 +137,7 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    # 英語版WindowsやCIのCP1252標準出力でも日本語ログを欠損・例外なく出力します。
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
     raise SystemExit(main())
