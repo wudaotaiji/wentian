@@ -1,0 +1,12 @@
+[
+  {
+    "id": "your-source",
+    "projects": ["your-project"],
+    "origins": ["https://your-source.example"],
+    "allowPrivate": false,
+    "headers": {},
+    "storageStatePath": "C:/private/wentian/source-state.json",
+    "selector": "body",
+    "readPostUrls": []
+  }
+]

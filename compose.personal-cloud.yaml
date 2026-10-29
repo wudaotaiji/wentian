@@ -1,0 +1,26 @@
+# 制御平面（Control Plane）をアプリ実行PCと分離して配置する構成です。
+# 公開TLSは運営側のリバースプロキシで終端し、このポートを直接インターネットへ公開しません。
+services:
+  control-plane:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8787:8787"
+    environment:
+      WENTIAN_CLOUD_MODE: "true"
+      WENTIAN_ADMIN_USERNAME: "${WENTIAN_CLOUD_ADMIN_USERNAME:-admin}"
+      WENTIAN_ADMIN_PASSWORD: "${WENTIAN_CLOUD_ADMIN_PASSWORD:?Cloud管理者の初期パスワードを環境変数へ設定してください}"
+      WENTIAN_USER_STORE: /app/.wentian/control-center-users.json
+      WENTIAN_CLOUD_STORE: /app/.wentian/personal-cloud/cloud.sqlite
+      WENTIAN_AGENT_CONNECTION_MAINTENANCE: "false"
+    volumes:
+      - personal-cloud-data:/app/.wentian
+    # Dockerソケット、ホストのルート、ノード鍵は制御サーバーへマウントしません。
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+volumes:
+  personal-cloud-data:

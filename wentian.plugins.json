@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "activeProfile": "standard",
+  "modules": [],
+  "profiles": {
+    "minimal": {
+      "plugins": [
+        { "id": "core.model" },
+        { "id": "core.tools" },
+        { "id": "core.session" },
+        { "id": "core.sandbox" },
+        { "id": "core.storage" },
+        { "id": "core.loop" }
+      ]
+    },
+    "standard": {
+      "extends": "minimal",
+      "plugins": [
+        { "id": "core.cloud-adapters" },
+        { "id": "core.cloud-ai-review" },
+        { "id": "core.cloud-federation" },
+        { "id": "core.skills" },
+        { "id": "core.scheduler" },
+        { "id": "core.ui" },
+        { "id": "core.study-jupyter" },
+        { "id": "core.meetings" },
+        { "id": "core.planner" },
+        { "id": "core.selector" },
+        { "id": "core.runner" },
+        { "id": "core.repair" },
+        { "id": "core.verifier" },
+        { "id": "core.memory" }
+      ]
+    },
+    "review": {
+      "extends": "minimal",
+      "plugins": [
+        { "id": "core.planner" },
+        { "id": "core.selector" },
+        { "id": "core.runner" },
+        { "id": "core.verifier" }
+      ]
+    }
+  },
+  "overlays": []
+}

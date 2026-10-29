@@ -1,0 +1,17 @@
+{
+  "ja": {
+    "title": "検証付き成果物の引き渡し",
+    "description": "ファイル作成・コード修正の依頼で、成果と検証証拠をそろえて報告します。",
+    "content": "作業前に対象ファイルと利用者の受入条件を確認してください。\n作成・修正後は対象ファイルを読み直し、依頼に必要な検査を行ってください。\n成功したコマンド、実際の成果物、未検証事項を分けて報告してください。\n回答を生成したことだけを根拠に「検証済み」と宣言しないでください。\n自分が都合よく成功できるように受入条件を弱めないでください。"
+  },
+  "en": {
+    "title": "Verified delivery",
+    "description": "Deliver file creation and code changes with the actual artifacts and evidence of verification.",
+    "content": "Before starting, confirm the target files and the user's acceptance criteria.\nAfter creating or modifying files, read them again and perform the checks required by the request.\nReport successful commands, actual deliverables, and unverified items separately.\nDo not claim verification solely because an answer was generated.\nDo not weaken acceptance criteria to make your own work pass."
+  },
+  "zh": {
+    "title": "经验证的成果交付",
+    "description": "针对文件创建与代码修改请求，结合实际成果和验证证据进行交付报告。",
+    "content": "开始工作前，确认目标文件与用户的验收条件。\n创建或修改后，重新读取目标文件，并执行请求所需的检查。\n分别报告成功执行的命令、实际成果与未验证事项。\n不得仅因生成了回答就宣称「已验证」。\n不得为了让自己的工作通过而降低验收条件。"
+  }
+}

@@ -1,0 +1,11 @@
+検証で使用した文章と設定
+
+日本語：こんにちは。動画と音声の制作を確認しています。
+中国語：你好。正在确认视频和音频制作功能。
+英語：Hello. We are testing video and audio production.
+
+BGMの指示：Gentle piano melody
+効果音の指示：Rain falling on a roof
+動画の字幕：動画と音声の合成テスト
+
+AI音声は1秒の短い動作確認用です。小型動画モデルはランダム重みのため、意味のある映像を生成しません。

@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "synthetic": true,
+  "files": [
+    {
+      "name": "01-policy-ja-v1.md",
+      "bytes": 1114,
+      "sha256": "7144183b38c9423166a1e2ae56294ce2401be7c28ba6a37fa4567d587909beea"
+    },
+    {
+      "name": "02-policy-ja-v2.md",
+      "bytes": 1230,
+      "sha256": "7090694fcb0d95806a5fc8d1854c4836f2b974567c50478c5c13c9e357534672"
+    },
+    {
+      "name": "03-training-plan-zh.md",
+      "bytes": 747,
+      "sha256": "0618e49a4f47635916e95d2c3ad91640d4147dcacc62f22dd440b25d2f14d8d6"
+    },
+    {
+      "name": "04-cost-table.csv",
+      "bytes": 192,
+      "sha256": "403d903ad65930a1a744e5be1a0f4557becba12fd931b52a01e332bf9bc9c470"
+    },
+    {
+      "name": "05-note.txt",
+      "bytes": 382,
+      "sha256": "541a1f636e2965ff90f55b711204ddb8b3134029c9d063f4ecb9934b875b1850"
+    },
+    {
+      "name": "06-unconfirmed-question.txt",
+      "bytes": 443,
+      "sha256": "e6a8185facc09fbc8a9322105bda4b28b837e50601aee39cc084eef30f02a976"
+    },
+    {
+      "name": "07-policy-table.pdf",
+      "bytes": 48697,
+      "sha256": "e3852732f29397594ad791e9aef72cbc7ae67b4fcb26115b4ae4b3684caaafdc"
+    },
+    {
+      "name": "08-workflow.png",
+      "bytes": 63996,
+      "sha256": "50027e619917cfddde5851e1c301667999ac69d233c5b72f04c9ebb588881968"
+    },
+    {
+      "name": "09-scan-checklist.pdf",
+      "bytes": 63343,
+      "sha256": "aa52c7bd450710d2ef84bcdbca90cc2c075e068faff5f608275a0048aa0fa61b"
+    },
+    {
+      "name": "10-meeting-ja.wav",
+      "bytes": 1287698,
+      "sha256": "5bf40a5ebbddb9ae39221af9056b9bc96604d69987de265d8f1493bac398ce1c"
+    },
+    {
+      "name": "11-meeting-groundtruth.md",
+      "bytes": 527,
+      "sha256": "8cecefbc678718464a79b13160d1fa27b7278f0adc14fb78e81b2c8ad01c0bf7"
+    },
+    {
+      "name": "acceptance-basic.json",
+      "bytes": 1790,
+      "sha256": "f67b78a11b533f01a99a27099d7cf504f753b628808dca3e8998c97b716d6a58"
+    },
+    {
+      "name": "acceptance-media.json",
+      "bytes": 2545,
+      "sha256": "af7ae5b7fad29ad7d725282ef09ceb9c287bb96e95c78f1f3b0bb755c2b30c53"
+    },
+    {
+      "name": "audio-metadata.json",
+      "bytes": 931,
+      "sha256": "a27bad8d149181fea8ed009957fdf1db97246ed0ef58e4b0793ab9f1b19ee4ac"
+    },
+    {
+      "name": "checklist.csv",
+      "bytes": 2414,
+      "sha256": "052b2aced719c9749f886644e8b368fd652db2bc3da6f18d4ea8ee873ec62534"
+    },
+    {
+      "name": "expected-results.json",
+      "bytes": 997,
+      "sha256": "8fbdb0bb2b65bc801a3121fb9b1cfe843d9c6cf0d7e83d9d270e13e53595a2f1"
+    },
+    {
+      "name": "README.md",
+      "bytes": 2250,
+      "sha256": "15854e95500750aeff9891d750924b23fa4f54bd6e8dd7e4494eb44bb385c218"
+    }
+  ]
+}

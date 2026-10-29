@@ -1,0 +1,30 @@
+{
+  "providers": [
+    {
+      "id": "lmstudio",
+      "name": "LM Studio Local",
+      "kind": "llm",
+      "scope": "local",
+      "baseUrl": "http://127.0.0.1:1234/v1",
+      "priority": 10,
+      "enabled": true,
+      "autoRoute": true,
+      "tags": ["local", "coding", "reasoning", "tools", "vision"],
+      "capabilities": { "coding": 0.9, "reasoning": 0.9, "tool": 0.9, "vision": 0.9, "contextTokens": 32768 },
+      "visionModels": ["local-model"]
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama Local",
+      "kind": "llm",
+      "scope": "local",
+      "baseUrl": "http://127.0.0.1:11434/v1",
+      "priority": 20,
+      "enabled": true,
+      "autoRoute": true,
+      "tags": ["local", "coding", "reasoning", "tools", "vision"],
+      "capabilities": { "coding": 0.8, "reasoning": 0.8, "tool": 0.8, "vision": 0.8, "contextTokens": 32768 },
+      "visionModels": ["*"]
+    }
+  ]
+}

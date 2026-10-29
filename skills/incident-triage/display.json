@@ -1,0 +1,17 @@
+{
+  "ja": {
+    "title": "障害の初期診断",
+    "description": "起動失敗・接続失敗を読み取り専用で切り分け、根拠と対処方法を提示します。",
+    "content": "症状、発生時刻、対象ホストとポートを確認してください。\n設定、実行プロセス、ログ、到達性を順番に調べてください。\n秘密値を表示せず、確認できた事実と推測を明示してください。\nサービス停止、設定変更、削除は診断の依頼だけで実行しないでください。"
+  },
+  "en": {
+    "title": "Incident triage",
+    "description": "Diagnose startup and connection failures with read-only checks, and present evidence and remedies.",
+    "content": "Confirm the symptoms, time of occurrence, target host, and port.\nCheck configuration, running processes, logs, and reachability in that order.\nDo not expose secrets. Clearly distinguish verified facts from assumptions.\nA diagnostic request alone does not authorize stopping services, changing settings, or deleting data."
+  },
+  "zh": {
+    "title": "故障初步诊断",
+    "description": "通过只读检查排查启动与连接故障，提供依据和处理方法。",
+    "content": "确认症状、发生时间、目标主机与端口。\n依次检查配置、运行进程、日志与连通性。\n不要显示秘密值，明确区分已确认的事实与推测。\n仅收到诊断请求时，不得停止服务、修改配置或删除数据。"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "wentian-gateway",
+  "version": "0.6.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "wentian": "bin/wentian.js"
+  },
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "start": "tsx src/server.ts",
+    "wentian": "tsx src/cli.ts",
+    "build": "tsc --noEmit",
+    "test": "node --import tsx --import ./src/test-environment.ts --test --test-concurrency=2 src/*.test.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1147.0",
+    "@fastify/cors": "latest",
+    "@modelcontextprotocol/sdk": "1.32.0",
+    "@napi-rs/canvas": "^1.0.13",
+    "@opentui/core": "0.4.5",
+    "ajv": "8.20.0",
+    "docx": "^9.13.0",
+    "exceljs": "^4.4.0",
+    "fast-xml-parser": "^5.11.2",
+    "fastify": "latest",
+    "fflate": "^0.8.3",
+    "imapflow": "^2.2.11",
+    "mailparser": "^3.9.37",
+    "openai": "latest",
+    "pdfjs-dist": "^6.4.299",
+    "pg": "^8.23.1",
+    "playwright": "^1.64.1",
+    "pptxgenjs": "^4.0.1",
+    "sanitize-html": "^2.18.1",
+    "string-width": "7.2.0",
+    "stripe": "^23.0.0",
+    "tough-cookie": "^6.0.2",
+    "ws": "8.22.0"
+  },
+  "devDependencies": {
+    "@types/mailparser": "^3.9.0",
+    "@types/node": "latest",
+    "@types/pg": "^8.23.1",
+    "@types/sanitize-html": "^2.16.2",
+    "@types/ws": "8.18.2",
+    "bun": "^1.4.0",
+    "happy-dom": "^20.14.5",
+    "tsx": "latest",
+    "typescript": "latest"
+  },
+  "allowScripts": {
+    "bun@1.4.3": true,
+    "esbuild@0.28.2": true
+  },
+  "overrides": {
+    "image-size": "^2.0.3",
+    "exceljs": {
+      "uuid": "^11.1.1"
+    }
+  }
+}

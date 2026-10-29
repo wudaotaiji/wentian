@@ -1,0 +1,23 @@
+# 配布物へ秘密設定、実行時データ、個人の検証記録を含めません。
+.env
+.env.*
+!.env.example
+.wentian/
+.agents/
+.codex/
+.aws/
+.git/
+docs/evidence/
+.e2e/
+.venv/
+__pycache__/
+*.pyc
+*.log
+*.bak
+*.sqlite
+*.sqlite3
+.aider.chat.history.md
+.aider.input.history
+.codex-test*
+archive-*/
+wentian-context.tar.gz

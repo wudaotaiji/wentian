@@ -1,0 +1,2 @@
+# Python補助処理の依存をまとめた導入口です。Node.jsの依存はpackage-lock.jsonで管理します。
+-r scripts/requirements-agent-maintenance.txt

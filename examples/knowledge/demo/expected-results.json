@@ -1,0 +1,11 @@
+{
+  "version":1,
+  "synthetic":true,
+  "policyV1":{"hotelPerPersonPerNightYen":12000,"people":4,"nights":2,"days":3,"allowancePerPersonPerDayYen":2000,"hotelTotalYen":96000,"allowanceTotalYen":24000,"totalExcludingTransportYen":120000},
+  "policyV2":{"hotelPerPersonPerNightYen":15000,"hotelTotalYen":120000,"allowanceTotalYen":24000,"totalExcludingTransportYen":144000,"increaseYen":24000},
+  "schedule":{"start":"2026-11-12","end":"2026-11-14"},
+  "unknowns":["参加者の氏名","ホテル名","交通費の金額","予約完了状況","承認者の実名"],
+  "diagram":["資料追加","根拠付き回答","提案書作成","根拠検証","知識庫へ再保存"],
+  "meeting":{"decision":"研修日程は11月12日から14日","task":"規程の上限額を確認して提案書を作る","assignee":"担当A","due":"11月5日","unknown":"交通費"},
+  "note":"人間用の照合値です。製品のAI判断を固定回答で代替せず、知識庫へ投入しないでください。"
+}

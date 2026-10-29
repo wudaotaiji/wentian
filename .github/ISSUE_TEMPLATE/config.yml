@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 開発参加ガイド
+    url: https://github.com/wudaotaiji/wentian/blob/main/CONTRIBUTING.md
+    about: Clone、開発環境、テスト、Pull Requestの手順を確認します
+  - name: 行動規範
+    url: https://github.com/wudaotaiji/wentian/blob/main/CODE_OF_CONDUCT.md
+    about: コミュニティへ参加する際のルールを確認します

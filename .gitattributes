@@ -1,0 +1,12 @@
+# 監査原資料は改行変換を行わず、記録したSHA-256と同一のバイト列を保存します。
+docs/evidence/** -text -whitespace
+# CLIの原ログは末尾空白・制御コードを証拠として保持し、整形差分の対象にしません。
+docs/evidence/**/cli.log -diff
+
+# 配布サンプルはmanifestのハッシュと一致するよう、Windowsでも改行を変換しません。
+examples/knowledge/demo/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# PDF等の配布物はバイナリーとして扱い、改行変換やテキスト差分で破損させません。
+*.pdf binary
+*.png binary
+*.wav binary
+*.zip binary

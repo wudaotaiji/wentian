@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "materials": [
+    {
+      "id": "policy",
+      "file": "01-policy-ja-v1.md",
+      "title": "星見出張規程",
+      "contentType": "text/markdown",
+      "language": "ja",
+      "features": [
+        "text",
+        "numbers"
+      ]
+    },
+    {
+      "id": "plan",
+      "file": "03-training-plan-zh.md",
+      "title": "星见培训计划",
+      "contentType": "text/markdown",
+      "language": "zh",
+      "features": [
+        "text"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "useCase": "grounded-answer",
+      "mode": "answer",
+      "question": "2026年11月12日から14日の架空の研修を対象に、提示資料の出張規程に記載された宿泊費上限、日当、超過時の承認条件を、正確な引用とともに日本語で説明してください。氏名・ホテル・交通費・予約状況は資料にある事実だけを使ってください。"
+    },
+    {
+      "useCase": "proposal-resave",
+      "mode": "proposal",
+      "question": "日本語の出張規程と中国語の培训计划を根拠に、4人・2泊3日の研修提案書を日本語で作成してください。日程、研修内容、宿泊費と日当の根拠・計算、合計、承認条件を分け、交通費は別途実費としてください。提案と既成事実を区別し、資料にない事項は未確認としてください。"
+    },
+    {
+      "useCase": "sync-reanswer",
+      "mode": "answer",
+      "question": "改定後の宿泊費上限と、4人・2泊3日の宿泊費・日当の上限合計を再計算してください。旧版の成果を現行の根拠にせず、最新版の引用を示してください。",
+      "update": {
+        "id": "policy",
+        "file": "02-policy-ja-v2.md"
+      }
+    }
+  ]
+}

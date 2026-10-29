@@ -1,0 +1,42 @@
+# Gatewayが生成するイベント履歴などの実行時データは登録しません。
+.wentian/
+
+# Node.jsの依存物とビルド成果物は登録しません。
+node_modules/
+dist/
+
+# APIキーなどの秘密情報を含む可能性があるローカル環境設定は登録しません。
+.env
+.env.*
+!.env.example
+
+# E2E（エンドツーエンド / End-to-End）検証時の一時ログは登録しません。
+.e2e/
+
+# Pythonの構文検査で生成されるバイトコードキャッシュは登録しません。
+__pycache__/
+.venv/
+*.pyc
+
+# 実ブラウザの画面画像は個人情報を含む可能性があるため、目視検収・公開選別前はローカルに保持します。
+docs/evidence/browser-visual/
+
+# Docker（ドッカー / Docker）の手動ビルドで生成するコンテキストアーカイブは登録しません。
+wentian-context.tar.gz
+
+# Aider（エイダー / Aider）がローカル対話で生成する履歴は登録しません。
+.aider.chat.history.md
+.aider.input.history
+
+# 外部CLI配布物の展開・ダウンロード用ディレクトリーは登録しません。
+archive-*/
+
+# 公開用ソースへ実環境の検証記録を登録しません。
+docs/evidence/
+
+# 書房に保存する利用者のノート・Agent成果物は公開しません。
+notebooks/
+
+# 知識庫収集用のブラウザーログイン状態は公開しません。
+playwright/.auth/
+*.storage-state.json

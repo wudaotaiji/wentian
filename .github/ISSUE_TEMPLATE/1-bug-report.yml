@@ -1,0 +1,77 @@
+name: 不具合報告
+description: 再現可能な不具合や予期しない動作を報告します
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        報告ありがとうございます。秘密情報を含めず、再現に必要な情報を記入してください。
+  - type: textarea
+    id: summary
+    attributes:
+      label: 不具合の概要
+      description: 何が起きたかを簡潔に説明してください。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: 問題を再現できる完全な手順を番号付きで記載してください。
+      placeholder: |
+        1. `npm ci`を実行する
+        2. `npm run dev`を実行する
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待した動作
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の動作
+      description: エラーメッセージやHTTPステータスを秘密情報を除いて記載してください。
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Wentian GatewayのCommitまたはバージョン
+      placeholder: 例 71c334e または 0.5.0
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 実行環境
+      description: Windows、Node.js、npm、利用バックエンドのバージョンを記載してください。
+      placeholder: |
+        Windows 11
+        Node.js v24.16.0
+        npm 12.0.2
+        Ollama 0.x
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 関連ログ
+      description: APIキー、トークン、個人情報を必ず削除してください。
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 確認事項
+      options:
+        - label: 既存Issueに同じ報告がないことを確認しました
+          required: true
+        - label: ログからAPIキー、トークン、個人情報を削除しました
+          required: true
+        - label: 行動規範を確認しました
+          required: true

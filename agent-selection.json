@@ -1,0 +1,42 @@
+{
+  "fallback": {
+    "selection": "dynamic",
+    "maxCandidates": 3,
+    "probeTimeoutMs": 15000,
+    "cooldownMs": 1800000,
+    "repairIntervalMs": 30000,
+    "maxRepairAttempts": 2,
+    "costPerMillionTokens": {},
+    "planner": {
+      "model": "wentian-auto/all",
+      "timeoutMs": 120000
+    },
+    "plannerFallback": {
+      "timeoutMs": 90000,
+      "maxAttempts": 2
+    },
+    "repairPlanner": {
+      "model": "wentian-auto/all",
+      "timeoutMs": 30000
+    },
+    "roleTimeoutMs": {
+      "builder": 600000,
+      "tester": 180000,
+      "verifier": 180000,
+      "reviewer": 180000
+    },
+    "apiFallbackExcludedAgents": ["crush"],
+    "agentCapabilities": {
+      "ollama": ["text", "file_read", "file_write", "terminal", "review"],
+      "lmstudio": ["text", "file_read", "file_write", "terminal", "review"],
+      "goose": ["text", "file_read", "file_write", "terminal", "review"],
+      "crush": ["text", "file_read", "file_write", "terminal", "review"],
+      "kilo": ["text", "file_read", "file_write", "terminal", "review"],
+      "opencode": ["text", "file_read", "file_write", "terminal", "review"],
+      "hermes": ["text", "file_read", "file_write", "terminal", "web", "review"],
+      "claude": ["text", "file_read", "file_write", "terminal", "review"],
+      "cline": ["text", "file_read", "review"],
+      "openclaw": ["text", "file_read", "file_write", "terminal", "web", "review"]
+    }
+  }
+}

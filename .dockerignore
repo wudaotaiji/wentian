@@ -1,0 +1,11 @@
+.git
+.env
+.wentian
+.claude
+.crush
+.e2e
+archive-*
+logs
+node_modules
+docs
+*.log

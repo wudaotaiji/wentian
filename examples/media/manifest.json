@@ -1,0 +1,121 @@
+{
+  "examples": [
+    {
+      "id": "speech-ja",
+      "title": "日本語ナレーション",
+      "type": "audio",
+      "description": "PC標準の音声による実際の読み上げ。48kHz・ステレオ。",
+      "files": {
+        "wav": "speech-ja.wav",
+        "mp3": "speech-ja.mp3"
+      }
+    },
+    {
+      "id": "speech-zh",
+      "title": "中国語ナレーション",
+      "type": "audio",
+      "description": "PC標準の音声による実際の読み上げ。48kHz・ステレオ。",
+      "files": {
+        "wav": "speech-zh.wav",
+        "mp3": "speech-zh.mp3"
+      }
+    },
+    {
+      "id": "speech-en",
+      "title": "英語ナレーション",
+      "type": "audio",
+      "description": "PC標準の音声による実際の読み上げ。48kHz・ステレオ。",
+      "files": {
+        "wav": "speech-en.wav",
+        "mp3": "speech-en.mp3"
+      }
+    },
+    {
+      "id": "ai-music",
+      "title": "AI BGM・ピアノ",
+      "type": "audio",
+      "description": "MusicGen SmallをCPUで実生成した1秒の試聴用。モデルはCC-BY-NC 4.0。",
+      "files": {
+        "wav": "ai-music.wav",
+        "mp3": "ai-music.mp3"
+      }
+    },
+    {
+      "id": "ai-sound",
+      "title": "AI 効果音・雨",
+      "type": "audio",
+      "description": "AudioLDM Small v2をCPU・2ステップで実生成した1秒の動作確認用。品質評価用ではありません。モデルはCC-BY-NC-SA 4.0。",
+      "files": {
+        "wav": "ai-sound.wav",
+        "mp3": "ai-sound.mp3"
+      }
+    },
+    {
+      "id": "audio-mix",
+      "title": "音声編集・2トラック",
+      "type": "audio",
+      "description": "日本語と中国語の音声を、配置・切取・音量・反復・フェード指定で合成した4秒の音声。",
+      "files": {
+        "wav": "audio-mix.wav",
+        "mp3": "audio-mix.mp3"
+      }
+    },
+    {
+      "id": "video-with-audio",
+      "title": "動画・音声・字幕の合成",
+      "type": "video",
+      "description": "検証用の青色映像へナレーションと字幕を合成。0.25倍速・512×320・4秒。AIが生成した風景映像ではありません。",
+      "files": {
+        "mp4": "video-with-audio.mp4",
+        "srt": "video-with-audio.srt"
+      }
+    },
+    {
+      "id": "video-silent",
+      "title": "無音動画の編集",
+      "type": "video",
+      "description": "青色の検証用映像を編集した4秒のMP4。音声トラックを持ちません。",
+      "files": {
+        "mp4": "video-silent.mp4"
+      }
+    },
+    {
+      "id": "tiny-video-text",
+      "title": "小型動画モデル・文章から",
+      "type": "video",
+      "description": "約1MBのランダム重みの検証モデルによる実推論。ノイズ状の動画であり、文章に沿った実用映像ではありません。",
+      "files": {
+        "mp4": "tiny-video-text.mp4"
+      }
+    },
+    {
+      "id": "tiny-video-image",
+      "title": "小型動画モデル・画像から",
+      "type": "video",
+      "description": "約1MBのランダム重みの検証モデルによる実推論。ノイズ状の動画であり、文章に沿った実用映像ではありません。",
+      "files": {
+        "mp4": "tiny-video-image.mp4"
+      }
+    },
+    {
+      "id": "transcribe",
+      "title": "文字起こし・字幕",
+      "type": "text",
+      "description": "英語ナレーションをWhisper Tinyで実際に文字起こしした結果。字幕の時刻は区間単位です。",
+      "files": {
+        "txt": "transcribe.txt",
+        "srt": "transcribe.srt",
+        "json": "transcribe.json"
+      }
+    },
+    {
+      "id": "production-text",
+      "title": "制作に使った文章・指示",
+      "type": "text",
+      "description": "読み上げ本文、BGM・効果音の指示、字幕本文を保存しています。",
+      "files": {
+        "txt": "production-text.txt"
+      }
+    }
+  ]
+}

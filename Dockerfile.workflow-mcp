@@ -1,0 +1,8 @@
+# 設定可能なWentian Gatewayをベースに、MCPのソースだけを更新します。
+# 依存関係は変更していないため、再導入による容量消費と構築時間を抑えます。
+ARG WENTIAN_BASE_IMAGE=wentian-gateway:latest
+FROM ${WENTIAN_BASE_IMAGE}
+
+# 非rootの実行ユーザーが読み取れる所有権で、MCP実装を含むsrcと起動時必須のPlugin Manifestを差し替えます。
+COPY --chown=node:node src /app/src
+COPY --chown=node:node wentian.plugins.json /app/wentian.plugins.json

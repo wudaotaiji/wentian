@@ -1,0 +1,50 @@
+name: 機能提案
+description: 新機能や既存機能の改善を提案します
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提案ありがとうございます。解決したい問題と利用例を中心に記載してください。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 解決したい問題
+      description: 現在どのような不便や制約がありますか。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案する変更
+      description: 期待する入力、出力、操作方法を具体的に説明してください。
+    validations:
+      required: true
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: 利用例
+      description: 誰が、どのような状況で利用するかを記載してください。
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 検討した代替案
+      description: 現在の回避策や別の設計案があれば記載してください。
+  - type: textarea
+    id: risks
+    attributes:
+      label: セキュリティと互換性への影響
+      description: API互換性、認証、ローカルファイル、外部接続への影響があれば記載してください。
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 確認事項
+      options:
+        - label: 既存Issueとドキュメントに同じ提案がないことを確認しました
+          required: true
+        - label: 行動規範を確認しました
+          required: true

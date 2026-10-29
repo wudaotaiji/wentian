@@ -1,0 +1,17 @@
+{
+  "ja": {
+    "title": "プロジェクトの概要把握",
+    "description": "初めて扱うプロジェクトの構造・起動方法・テスト方法を短く整理します。",
+    "content": "README、package.jsonなどの設定、Git状態を読み取ってください。\n必要な部分だけを検索し、依存フォルダーや秘密情報を出力しないでください。\n目的、主要な入口、起動手順、検証手順、不明点を出典ファイルとともに報告してください。\n調査だけの依頼ではファイルを変更しないでください。"
+  },
+  "en": {
+    "title": "Project overview",
+    "description": "Summarize an unfamiliar project's structure, startup instructions, and testing procedures.",
+    "content": "Read the README, configuration such as package.json, and Git status.\nSearch only the necessary areas. Do not output dependency directories or secrets.\nReport the purpose, main entry points, startup and verification procedures, and open questions, citing source files.\nDo not modify files when the request is only to investigate."
+  },
+  "zh": {
+    "title": "项目概览",
+    "description": "简要整理初次接触项目的结构、启动方式与测试方法。",
+    "content": "读取 README、package.json 等配置以及 Git 状态。\n仅搜索必要部分，不要输出依赖目录或秘密信息。\n结合来源文件，报告项目目的、主要入口、启动步骤、验证步骤与未明确事项。\n仅收到调查请求时，不得修改文件。"
+  }
+}

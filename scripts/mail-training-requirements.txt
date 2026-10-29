@@ -1,0 +1,3 @@
+# Mail Solutions 分類学習の Python 依存です。抽出書式学習は標準ライブラリを使います。
+scikit-learn==1.9.0
+joblib==1.5.3

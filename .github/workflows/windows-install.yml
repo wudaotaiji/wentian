@@ -1,0 +1,44 @@
+name: Windows installation
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  install:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        installer: [powershell, python]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install into isolated path with spaces
+        shell: pwsh
+        run: |
+          $destination = Join-Path $env:RUNNER_TEMP 'Wentian install'
+          if ('${{ matrix.installer }}' -eq 'powershell') {
+            & ./install.ps1 -SourceDirectory $PWD.Path -InstallRoot $destination -NoPathUpdate
+          } else {
+            python install.py --source-directory . --install-root $destination --no-path-update
+            if ($LASTEXITCODE -ne 0) { throw 'Installation failed' }
+          }
+          Set-Location $env:RUNNER_TEMP
+          Remove-Item Env:WENTIAN_PLUGIN_MANIFEST -ErrorAction SilentlyContinue
+          node "$destination/bin/wentian.js" skills list
+          if ($LASTEXITCODE -ne 0) { throw 'CLI smoke check failed' }
+          $env:WENTIAN_PUBLIC_PORT = '0'
+          $server = Start-Process node -ArgumentList "`"$destination/bin/wentian.js`" server --port 18787 --hostname 127.0.0.1" -PassThru -WindowStyle Hidden
+          try {
+            $ready = $false
+            for ($attempt = 0; $attempt -lt 60; $attempt++) {
+              try {
+                $response = Invoke-WebRequest http://127.0.0.1:18787/workbench -TimeoutSec 2
+                if ($response.StatusCode -eq 200) { $ready = $true; break }
+              } catch { Start-Sleep -Seconds 1 }
+            }
+            if (-not $ready) { throw 'Workbench did not become ready' }
+          } finally {
+            taskkill /PID $server.Id /T /F
+          }

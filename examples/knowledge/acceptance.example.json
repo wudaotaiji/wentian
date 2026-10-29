@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "materials": [
+    {"id": "rules", "file": "private/rules-ja.pdf", "title": "検収用の規程", "contentType": "application/pdf", "language": "ja", "features": ["table", "scan"]},
+    {"id": "plan", "file": "private/plan-zh.txt", "title": "検収用の計画", "contentType": "text/plain", "language": "zh", "features": ["text"]}
+  ],
+  "cases": [
+    {"useCase": "grounded-answer", "mode": "answer", "question": "適用条件と例外を資料の改訂・引用付きで説明してください。確認できない点は分けてください。"},
+    {"useCase": "proposal-resave", "mode": "proposal", "question": "規程と計画を照合し、根拠と提案を分けた実行案を作成してください。"},
+    {"useCase": "sync-reanswer", "mode": "answer", "question": "更新後の条件と以前の回答への影響を引用付きで説明してください。", "update": {"id": "rules", "file": "private/rules-ja-updated.pdf"}}
+  ]
+}

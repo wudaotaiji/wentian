@@ -1,0 +1,10 @@
+# 設定可能なWentianベースイメージを使用し、依存関係を再送せず更新します。
+# package.jsonとpackage-lock.jsonはベースイメージ作成後に変更されていないため、
+# アプリケーションソースと実行時設定だけを差し替える方式を採用します。
+ARG WENTIAN_BASE_IMAGE=wentian-gateway:latest
+FROM ${WENTIAN_BASE_IMAGE}
+
+# 新規追加ファイルを含むsrc全体と、外部エージェント選択設定を最新版へ置換します。
+# --chownを指定し、非rootユーザーnodeの所有権を維持します。
+COPY --chown=node:node src /app/src
+COPY --chown=node:node providers.json agent-selection.json /app/

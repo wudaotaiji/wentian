@@ -1,0 +1,47 @@
+name: Anonymous public installation
+on: [push, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  anonymous-install:
+    if: github.repository == 'wudaotaiji/wentian'
+    runs-on: windows-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        installer: [powershell, python]
+    steps:
+      # checkoutを行わず、Git資格情報のない一時Windowsから公開URLだけを使います。
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Execute the documented anonymous command
+        shell: powershell
+        run: |
+          if ('${{ matrix.installer }}' -eq 'powershell') {
+            irm https://raw.githubusercontent.com/wudaotaiji/wentian/main/install.ps1 | iex
+          } else {
+            irm https://raw.githubusercontent.com/wudaotaiji/wentian/main/install.py -OutFile "$env:TEMP\wentian-install.py"
+            python "$env:TEMP\wentian-install.py"
+            if ($LASTEXITCODE -ne 0) { throw 'Python installation failed' }
+          }
+      - name: Verify setup, first administrator and browser login
+        shell: pwsh
+        run: |
+          $installed = Join-Path $env:LOCALAPPDATA 'Programs/wentian-gateway'
+          Set-Location $env:RUNNER_TEMP
+          node "$installed/scripts/verify-public-install.mjs" --install-root $installed --output "$env:RUNNER_TEMP/verification"
+          if ($LASTEXITCODE -ne 0) { throw 'Setup verification failed' }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: anonymous-${{ matrix.installer }}
+          path: |
+            ${{ runner.temp }}/verification/result.json
+            ${{ runner.temp }}/verification/setup.log
+            ${{ runner.temp }}/verification/setup-account.png
+          if-no-files-found: ignore

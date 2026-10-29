@@ -1,0 +1,5 @@
+model: openai/local-model
+openai-api-base: http://127.0.0.1:1234/v1
+openai-api-key: no-key
+check-update: false
+show-model-warnings: false
